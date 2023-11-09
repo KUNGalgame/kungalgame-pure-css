@@ -47,7 +47,7 @@
 /* 侧边栏部分 */
 .aside {
   /* 侧边栏距离文章区域的距离 */
-  margin-right: 5px;
+  margin: 0.5rem;
   width: 240px;
   /* 侧边栏相对于整体可视部分的占比 */
   /* 侧边栏高度 */
@@ -491,7 +491,6 @@
 /* 文章容器 */
 .article-container {
   /* 左侧文章区的总大小 */
-  width: 100%;
   height: 100%;
   /* 盒子的边显示在内侧 */
   box-sizing: border-box;
@@ -505,6 +504,8 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 /* 
 ----------------------------------
@@ -764,7 +765,7 @@
 /* 帖子区容器 */
 .topic-container {
   /* 帖子区域占文章总区域的宽度 */
-  width: 98%;
+  width: 100%;
   min-height: 1150px;
   overflow-y: scroll;
   /* 所有帖子的总区域占左侧页面的下边距 */
@@ -788,13 +789,14 @@
 /* 单个帖子 */
 .topic {
   width: 100%;
-  height: 70px;
+  min-height: 8rem;
   flex-shrink: 0;
   border-radius: 3px;
   background-color: var(--kungalgame-trans-white-4);
-  margin-bottom: 3px;
+  margin-bottom: 0.5rem;
   /* 单个帖子横向弹性盒 */
   display: flex;
+  align-items: center;
 }
 .topic:hover {
   background-color: var(--kungalgame-trans-white-1);
@@ -806,13 +808,14 @@
 }
 /* 发帖人信息 */
 .kungalgamer-topic-info {
-  width: 70px;
-  height: 100%;
+  width: 5rem;
+  height: 6rem;
   /* 单个帖子左右两部分发布人信息和帖子概览均为竖向弹性盒 */
   display: flex;
   flex-direction: column;
   /* 发帖人信息距离帖子概览的距离 */
-  margin: 0 5px;
+  margin: 0 1.5rem;
+  box-sizing: border-box;
 }
 .kungalgamer-topic-avatar,
 .kungalgamer-name {
@@ -861,7 +864,7 @@
   text-overflow: ellipsis;
   /* 颜色和字体大小 */
   color: var(--kungalgame-font-color-3);
-  font-size: x-small;
+  font-size: 0.8rem;
 }
 /* 帖子信息 */
 .topic-info {
@@ -871,12 +874,13 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  margin: 1rem;
 }
 /* 帖子的概览信息 */
 .topic-summary,
 .topic-introduction {
   width: 100%;
-  height: 1px;
+  margin-top: 0.5rem;
 }
 /* 帖子展示的头部 */
 .topic-summary {
@@ -953,14 +957,15 @@
 /* 文本域盒子 */
 .topic-introduction-text {
   width: 100%;
+  height: 100%;
   /* 设置文本超过两行就显示省略号 */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   overflow: hidden;
   -webkit-box-orient: vertical;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 /* 发帖预览信息的字体 */
 .topic-introduction-text p {
